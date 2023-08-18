@@ -3,10 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
-section{
+.container{
     position: relative;
-    width: 250px;
+    width: 300px;
     transition: all .3 ease;    
+    margin: 0 auto;
+    margin-top: 100px;
 }
 .img_1{
     box-shadow: 0 60px 60px -60px rgba (0, 30, 255, 0.5);
@@ -18,23 +20,24 @@ h1{
     position: absolute;
     z-index: 1;
     color: #bba1c6;
+    text-shadow: 0 0 10px black;
+    padding: 10px;
 }
 .img_2{
     position: absolute;
     width: 200px;
     bottom: 17px;
-    left: 16px;
+    left: 32px;
     right: 0;
     margin: auto;
     transform: translateY(25%);
     transition: .3s ease;
     opacity: 0;   /*para ocultar la img*/ 
 }
-
-section:hover{
+.container:hover{
     transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
 }
-section::before{
+.container::before{
     content: "";
     position: absolute;
     bottom: 0;
@@ -44,14 +47,14 @@ section::before{
     opacity: 0;
     transition: all .3s ease;    
 }
-section:hover::before{
+.container:hover::before{
     opacity: 1;    
 }
-section:hover .img_2{
+.container:hover .img_2{
     opacity: 1;
     transform: translateY(10%);
 }
 h2{
-    color: #fe8a8b;
-    z-index: 3;
+    color: #e99d4f;    
+    z-index: 1;
 }
